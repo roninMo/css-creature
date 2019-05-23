@@ -1,0 +1,194 @@
+.holder {
+    margin: 100px;
+    
+}
+
+/* This was really interesting because you can box shadows to create angled shapes with border radius
+
+And even cooler, they used the before and after psuedo elements to create up to two extra shapes, I found this on a website and got comfy 
+with using position elements to align them together and overlap properly with z-indexing. My animations broke when I tried moving and rotating them. */ 
+.moon, .moon2, .moon3, .moon4, .moon5 {
+    
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.moon {
+    top: 97px;
+    left: 105px;
+    /* visibility: hidden; */
+    box-shadow: 15px 15px 0 0 rgb(14, 14, 102);
+
+}
+.moon2 {
+    top: 97px;
+    left: 110px;
+    transform: rotate(72deg);
+    /* visibility: hidden; */
+    box-shadow: 15px 15px 0 0 rgb(17, 17, 167);
+
+}
+.moon3 {
+    top: 102px;
+    left: 110px;
+    transform: rotate(144deg);
+    /* visibility: hidden; */
+    box-shadow: 15px 15px 0 0 rgb(49, 49, 252);
+
+}
+.moon4 {
+    top: 99px;
+    left: 105px;
+    transform: rotate(216deg);
+    /* visibility: hidden; */
+    box-shadow: 15px 15px 0 0 rgb(16, 16, 189);
+
+}
+.moon5 {
+    top: 100px;
+    left: 108px;
+    transform: rotate(280deg);
+    /* visibility: hidden; */
+    box-shadow: 15px 15px 0 0 rgb(10, 10, 102);
+
+}
+
+
+/*
+You can add up to two extra shapes using the before and after elements. 
+
+ */
+
+  #yin-yang {
+    width: 96px;
+    box-sizing: content-box;
+    height: 48px;
+    background: green;
+    border-color: blue;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  #yin-yang:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: green;
+    border: 18px solid blue;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+  }
+  #yin-yang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: blue;
+    border: 18px solid green;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+  }
+
+
+
+.hknight img.fTwo:hover {
+    opacity: 0;
+}
+
+@-webkit-keyframes walking {
+    0% {
+        transform: rotate(0deg);
+        left: 0%;
+        top: 50px;
+    }
+    25% {
+        transform: rotate(90deg);
+        left: 25%;
+        top: 100px;
+    }
+    50% {
+        transform: rotate(180deg);
+        left: 50%;
+        top: 150px;
+    }
+    75% {
+        transform: rotate(270deg);
+        left: 75%;
+        top: 100px;
+    }
+    100% {
+        transform: rotate(360deg);
+        left: 100%;
+        top: 50px;
+    }
+}
+
+
+.ground {
+    height: 90px;
+    width: 120px;
+    position: absolute;
+    z-index: -3;
+    top: 300px;
+    left: 120px;
+    background-color: rgb(16, 139, 16);
+    border-radius: 50%;
+    border: 2px solid rgb(15, 173, 15);
+
+}
+
+.body {
+    width: 50px;
+    height: 150px;
+    box-shadow: 15px 15px 5px 0 rgb(32, 158, 32);
+    z-index: -2;
+    position: absolute;
+    top: 180px;
+    left: 150px;
+    border-radius: 50%;
+    transform: scaleX(-1);
+
+
+}
+
+
+
+html { 
+    background-color: skyblue;
+    margin: 0;
+    padding: 0;
+}
+
+
+.torse {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    background-color: lightsalmon;
+    top: 445px;
+    left: 330px;
+}
+
+.arm {
+    width: 50px;
+    height: 150px;
+    background-color: none;
+    box-shadow: 15px 15px 0 0 lightsalmon;
+
+}
+.left {
+    position: relative;
+    top: 445px;
+    left: 330px;
+}
